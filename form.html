@@ -6,7 +6,42 @@
 </head>
 <body>
     <form action="http://www.baidu.com">
+        用户名 <input type="text" name="username">
+        <br>
+        密码 <input type="password" name="password">
+        <br>
+        性别 
+        <!-- 同一组的name需要相同 可以做到单选的效果 -->
+        <input type="radio" name="sex" value="1" checked> 男
+        <input type="radio" name="sex" value="0"> 女
+        <br>
+        兴趣
+        <input type="checkbox" name="hobby" value="1"> 篮球
+        <input type="checkbox" name="hobby" value="2" checked>  台球
+        <input type="checkbox" name="hobby" value="3" checked> 足球
+        <br>
+        学历
+        <!-- multiple 表示下拉框支持多选  size设置下拉框最多显示多少条-->
+        <select name="xueli" size="2" multiple>
+            <option value="cz">初中</option>
+            <option value="gz">高中</option>
+            <option value="bk" selected>本科</option>
+        </select>
+        <br>
+        简介
+        <textarea name="jianjie"  cols="30" rows="10"></textarea>
+        <br>
+        <!-- java后台通过IO流接受文件 -->
+        <input type="file">
+        <!-- 隐藏域控件 也能提交-->
+        <input type="hidden" name="code" value="1">
+        <!-- 都是只读的 但是disabled 不会提交 -->
+        机构代码 <input type="text" name="orgcode" value="1" readonly>
+        用户代码 <input type="text" name="usercode" value="1" disabled>
+        限制数<input type="text" maxlength="3">
+        <br>
         <input type="submit" value="百度">
+        <input type="reset" value="重置">
     </form>
 </body>
 </html>
