@@ -54,14 +54,12 @@ console.log(Number(""));
 console.log(Number(true));
 console.log("=================");
 
-
 //parseInt() 获取整数
 console.log(parseInt(""));
 console.log(parseInt("1234blue"));
 console.log(parseInt("0xA")); //十六进制
 //可以指定进制数
 console.log(parseInt("A", 16));
-
 
 //parseFloat()  获取浮点数 只能解析十进制
 console.log(parseFloat("22.34.5"));
